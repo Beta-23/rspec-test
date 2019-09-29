@@ -1,5 +1,6 @@
 class Card
-    
+    def initialize(type)    
+    end  
 end
 
 # RSpec module with the describe method
