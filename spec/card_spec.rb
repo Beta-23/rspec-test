@@ -1,26 +1,29 @@
 class Card
-    attr_reader :type
 
-    def initialize(type)  
-        @type = type  
-    end  
+    attr_reader :rank, :suit
+
+    def initialize(rank, suit)  
+        @rank = rank
+        @suit = suit
+    end 
 end
 
 # RSpec module with the describe method
 RSpec.describe Card do 
     # the it (specify) method describes how the value behaves or how it works
     it 'has a rank' do
-    card = Card.new('Seven', 'Clubs')  
-      # The expect method takes in an argument or assertion
-      expect(card.rank).to eq('Seven')
+        card = Card.new('Seven', 'Clubs')  
+        # The expect method takes in an argument or assertion
+        expect(card.rank).to eq('Seven')
     end
 
     it 'has a suit' do
         card = Card.new('Seven', 'Clubs')  
-          # The expect method takes in an argument or assertion
-          expect(card.suit).to eq('Clubs') 
+        # The expect method takes in an argument or assertion
+        expect(card.suit).to eq('Clubs') 
     end
 end
+
 # Second test
 RSpec.describe('math calculations') do
     it 'does basic math' do
@@ -30,3 +33,25 @@ RSpec.describe('math calculations') do
         expect(50 / 2).to eq(25)
     end
 end
+
+# Third test
+class School
+    attr_reader :name, :students
+
+    def initialize (name)   
+        @name = name 
+        @students = [] 
+    end
+end   
+
+    RSpec.describe School do
+        it 'has a name' do
+          school = School.new('Beverly Hills High School')
+          expect(school.name).to eq('Beverly Hills High School')
+        end
+      
+        it 'should start off with no students' do
+          school = School.new('Notre Dame High School')
+          expect(school.students).to eq([])
+        end
+    end
