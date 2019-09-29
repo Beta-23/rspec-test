@@ -1,3 +1,7 @@
+class Card
+    
+end
+
 # RSpec module with the describe method
 RSpec.describe('Card') do 
     # the it (specify) method describes how the value behaves or how it works
