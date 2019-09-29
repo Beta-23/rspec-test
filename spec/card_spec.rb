@@ -1,7 +1,8 @@
 class Card
     attr_reader :type
-    
-    def initialize(type)    
+
+    def initialize(type)  
+        @type = type  
     end  
 end
 
