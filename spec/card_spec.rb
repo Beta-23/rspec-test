@@ -10,17 +10,19 @@ end
 
 # RSpec module with the describe method
 RSpec.describe Card do 
+    # before action, runs individual rspc example before moving on to the next one
+    before do
+        @card = Card.new('Seven', 'Clubs')  
+    end
     # the it (specify) method describes how the value behaves or how it works
-    it 'has a rank' do
-        card = Card.new('Seven', 'Clubs')  
+    it 'has a rank' do 
         # The expect method takes in an argument or assertion
-        expect(card.rank).to eq('Seven')
+        expect(@card.rank).to eq('Seven')
     end
 
     it 'has a suit' do
-        card = Card.new('Seven', 'Clubs')  
         # The expect method takes in an argument or assertion
-        expect(card.suit).to eq('Clubs') 
+        expect(@card.suit).to eq('Clubs') 
     end
 end
 
