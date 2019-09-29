@@ -35,6 +35,13 @@ RSpec.describe Card do
         # The expect method takes in an argument or assertion
         expect(card.suit).to eq('Clubs') 
     end
+
+    it 'has a custom error message' do
+        # card.suit = 'Nonsense'
+        comparison = 'Clubs'
+        # The expect method takes in an argument or assertion with second argument
+        expect(card.suit).to eq(comparison), "Error, we expected #{comparison} but got #{card.suit} instead!"
+    end
 end
 
 # Second test
